@@ -18,16 +18,14 @@ def Get_Arguments():
     parser.add_option("-i", "--interface", dest="interface", help="Interface to change Mac Address")
     parser.add_option("-m", "--mac", dest="new_mac", help="The New Mac Address")
     options, _ = parser.parse_args()
-    if not options.interface :
-        parser.error("Please specify your interface, You can use --help for more information.")
-    if not options.new_mac :
-        parser.error("Please specify your new MAC address, You can use --help for more information.")
+   if not options.interface or not options.new_mac:
+        sys.exit("Please specify both interface and new MAC address. Use --help for more information.")
     if not is_valid_mac(options.new_mac):
-        sys.exit("Invalid MAC address format. Please provide a valid MAC address.")
+        sys.exit("Invalid MAC address format. Please provide a valid MAC address. Use --help for more information. ")
     return options
 
 if __name__ == "__main__":
-    ascii_banner = pyfiglet.figlet_format("MaC'Hanger")
-    print(ascii_banner)
+    banner = pyfiglet.figlet_format("MaC'Hanger")
+    print(banner)
     options = Get_Arguments()
     Change_Mac(options.interface, options.new_mac)
