@@ -2,12 +2,6 @@ import subprocess
 import optparse
 import pyfiglet
 
-def Change_Mac (interface,new_mac) :
-    print("[<_>]  Changing Mac Address for " + interface + " to "+ new_mac)
-    subprocess.call(["ifconfig " ,interface ," down"])
-    subprocess.call(["ifconfig " ,interface ,"hw" , "ether" ,new_mac] )
-    subprocess.call(["ifconfig" ,interface , "up"])
-
 def Get_Arguments():
     parser =optparse.OptionParser()
     parser.add_option("-i","--interface",dest="interface",help="Interface to change Mac Address")
@@ -19,6 +13,12 @@ def Get_Arguments():
         print("<!> Please specify new mac address , use --help for more informations .")
     return options
 
+
+def Change_Mac (interface,new_mac) :
+    print("[<_>]  Changing Mac Address for " + interface + " to "+ new_mac)
+    subprocess.call(["ifconfig " ,interface ," down"])
+    subprocess.call(["ifconfig " ,interface ,"hw" , "ether" ,new_mac] )
+    subprocess.call(["ifconfig" ,interface , "up"])
 
 ascii_banner = pyfiglet.figlet_format("MaC'Hanger")
 print(ascii_banner)
