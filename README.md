@@ -1,4 +1,4 @@
-# Mac_Changer
+# Mac'Hanger
 
 ## Features
 - Change the MAC address of a specified network interface.
