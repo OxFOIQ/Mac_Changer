@@ -17,7 +17,7 @@
 
 ## Help
 
-Usudo python3 Mac_Address_Changer.py --help
+Sudo python3 Mac_Address_Changer.py --help
 
 ## Options
 -i, --interface: Specify the network interface to change the MAC address.
