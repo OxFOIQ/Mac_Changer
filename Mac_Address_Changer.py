@@ -21,7 +21,7 @@ def Get_Arguments():
 
 
 if __name__ == "__main__":
-    ascii_banner = pyfiglet.figlet_format("MaC'Hanger",font="bulbhead")
+    ascii_banner = pyfiglet.figlet_format("MaC'Hanger")
     print(ascii_banner)
     options = Get_Arguments()
     Change_Mac(options.interface,options.new_mac)
