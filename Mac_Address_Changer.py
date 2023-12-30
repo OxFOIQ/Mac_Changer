@@ -15,7 +15,7 @@ def Get_Arguments():
     options, _ = parser.parse_args()
     if not options.interface :
         parser.error("Please specify your interface, You can use --help for more information.")
-        if not options.new_mac :
+    if not options.new_mac :
         parser.error("Please specify your new MAC address, You can use --help for more information.")
     return options
 
