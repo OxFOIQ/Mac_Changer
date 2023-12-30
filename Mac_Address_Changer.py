@@ -18,7 +18,7 @@ def Get_Arguments():
     parser.add_option("-i", "--interface", dest="interface", help="Interface to change Mac Address")
     parser.add_option("-m", "--mac", dest="new_mac", help="The New Mac Address")
     options, _ = parser.parse_args()
-   if not options.interface or not options.new_mac:
+    if not options.interface or not options.new_mac:
         sys.exit("Please specify both interface and new MAC address. Use --help for more information.")
     if not is_valid_mac(options.new_mac):
         sys.exit("Invalid MAC address format. Please provide a valid MAC address. Use --help for more information. ")
