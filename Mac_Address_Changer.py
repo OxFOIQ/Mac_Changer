@@ -1,12 +1,7 @@
-
-
-
-
-
-
 import subprocess
 import optparse
 import pyfiglet
+
 def Change_Mac (interface,new_mac) :
     print("[<_>]  Changing Mac Address for " + interface + " to "+ new_mac)
     subprocess.call(["ifconfig " ,interface ," down"])
@@ -30,5 +25,3 @@ if __name__ == "__main__":
     print(ascii_banner)
     options = Get_Arguments()
     Change_Mac(options.interface,options.new_mac)
-
-
