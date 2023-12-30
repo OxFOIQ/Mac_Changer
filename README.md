@@ -9,11 +9,15 @@
 
 - Linux operating system
 - Python 3
+- git
 
 ## Installation
 
 - Clone the repository:
    https://github.com/MedAmyyne/Mac_Changer.git
+  
+ < git clone https://github.com/MedAmyyne/Mac_Changer.git >
+
 
 ## Help
 
