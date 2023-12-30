@@ -2,6 +2,10 @@ import subprocess
 import optparse
 import pyfiglet
 
+
+def is_valid_mac(mac_address):
+    return re.match(r"([0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}$", mac_address) is not None
+
 def Change_Mac(interface, new_mac):
     print("[<_>]  Changing Mac Address for " + interface + " to " + new_mac)
     subprocess.run(["ifconfig", interface, "down"])
@@ -17,6 +21,8 @@ def Get_Arguments():
         parser.error("Please specify your interface, You can use --help for more information.")
     if not options.new_mac :
         parser.error("Please specify your new MAC address, You can use --help for more information.")
+    if not is_valid_mac(options.new_mac):
+        sys.exit("Invalid MAC address format. Please provide a valid MAC address.")
     return options
 
 if __name__ == "__main__":
