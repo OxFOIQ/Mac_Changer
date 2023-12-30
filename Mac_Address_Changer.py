@@ -1,7 +1,8 @@
 import subprocess
 import optparse
 import pyfiglet
-
+import re
+import sys
 
 def is_valid_mac(mac_address):
     return re.match(r"([0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}$", mac_address) is not None
