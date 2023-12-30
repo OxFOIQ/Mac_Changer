@@ -1,4 +1,4 @@
-                            
+# Mac'Hanger                           
 
 ## Features
 - Change the MAC address of a specified network interface.
@@ -27,17 +27,3 @@ Sudo python3 Mac_Address_Changer.py --help
 ## Usage
 
 sudo python3 Mac_Address_Changer.py -i <interface> -m <new_mac_address>
-
-
- 
- 
- 
- __  __        ____ _ _   _                             
-|  \/  | __ _ / ___( ) | | | __ _ _ __   __ _  ___ _ __ 
-| |\/| |/ _` | |   |/| |_| |/ _` | '_ \ / _` |/ _ \ '__|
-| |  | | (_| | |___  |  _  | (_| | | | | (_| |  __/ |   
-|_|  |_|\__,_|\____| |_| |_|\__,_|_| |_|\__, |\___|_|   
-                                        |___/           
-
-
-
