@@ -27,5 +27,7 @@ def Get_Arguments():
 if __name__ == "__main__":
     banner = pyfiglet.figlet_format("MaC'Hanger")
     print(banner)
+    print("-"*29+ "By MedAmyyne" + "-"*29)
+    print("="*70)
     options = Get_Arguments()
     Change_Mac(options.interface, options.new_mac)
